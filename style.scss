@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 20vh;
+    background-image: url(./image/header\ img.jpg);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    .logo{
+        width: 141px;
+        height: 100%;
+        
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+}
+@media screen and (max-width:991px){
+    header{
+        height: 39vh;
+        min-width: 320px;
+        min-height:245px;
+        background-image: url(./image/345420604_961449445204275_8898112531276502214_n-removebg-preview.png);
+        background-size: 80% 80%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        align-items: flex-start;
+
+        .logo{
+            display: none;
+
+            
+        }
+        nav{
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+}
+main{
+    width: 100%;
+    height: auto;
+    border: solid;
+   
+   padding-top: 20vh;
+
+    .container{
+        width: 100%;
+        height: 100vh;
+       background-image: url(./image/fon.jpg);
+        margin-top: 1px;
+        // .block{
+        //     display: flex;
+        // }
+        
+    }
+}
+
+
+
+
+@media screen and (max-width:991px){
+    main{
+        padding-top: 270px;
+        min-width: 320px;
+    }
+}
+
+#home{
+    animation: home 10s infinite alternate ease-in;
+}
+
+
+
+
+
+@keyframes home{
+    0%{background-image: url(./image/slide1.jpg);
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;}
+
+    25%{background-image: url(./image/slide2.jpg);
+        background-size: 100% 100%;background-position:
+         center;background-repeat: no-repeat;}
+
+    75%{background-image: url(./image/slide3.jpg);
+        background-size: 100% 100%;background-position:
+         center;background-repeat: no-repeat;}
+
+    100%{background-image: url(./image/slide4.jpg);
+        background-size: 100% 100%;background-position: 
+        center;background-repeat: no-repeat;}
+}
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    >.about-blocks{
+        width: 50%;
+        height: 70%;
+        min-width: 300px;
+        
+        padding: 20px;
+        >video{
+            width: 100%;
+            height: 100%;
+            source{
+                width: 100%;
+                height: 100%;
+
+            }
+
+        }
+        
+
+    }
+    h1{
+        width: 100%;
+    }
+
+
+    .text{
+        overflow: auto;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        >p{
+            text-align: justify;
+            
+        }
+    }
+    @media screen and (max-width:767px){
+        width: 100%;
+        height: auto;
+        >.about-blocks{
+            width: 100%;
+            height: 400px;
+            padding: 50px;
+        }
+
+    }
+}
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+
+
+
+    >form{
+        
+        width: 35%;
+        height: auto;
+        box-shadow: 0 0 5px grey;
+        transform: scale(1.05);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 10px;
+        min-width: 300px;
+       
+        
+
+
+        input{
+            width: 90%;
+            padding: 12px;
+            margin: 5px;
+            transition: 1s all ease-in-out;
+            &:hover{
+                transform: scale(1.05)
+            }
+        }
+        >p{
+            
+            width: 90%;
+            padding: 0 5px;
+        }
+        #message{
+            height: 200px;
+            margin-bottom: 5px;
+
+        }
+        button{
+            background-color: rgba(0, 0, 0, 0.011);
+            border: solid 1px white;
+            padding: 5px 10px;
+            cursor: pointer;
+            &:hover{
+                background-color: grey;
+                color: white;
+                box-shadow: 0 0 5px grey;
+            }
+
+        }
+       
+
+    
+    
+    }
+
+    >.contact-info{
+        width: 50%;
+        height: 96vh;
+        min-width: 289px;
+        
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        align-self: flex-end;
+
+
+
+
+
+        .social{
+           
+        
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 0px;
+
+
+        .contact{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .socinfo{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+           
+            a{
+                padding: 5px;
+                text-decoration: none;
+                text-decoration: none;
+                color: rgb(17, 17, 17);
+                font-weight: 600;
+
+
+    
+                img{
+                    width: 28px;
+                    height: 28px;
+                    
+                }
+            }
+        }
+       
+        }
+    }
+}
+@media screen and (max-width:767px){
+    #contact{
+        form{
+            flex-grow: 1;
+            margin-top: 20px;
+
+        }
+        .contact-info{
+            min-width: 299px;
+            height: auto;
+            flex-grow: 1;
+            justify-content: center;
+           
+
+            .social {
+                padding: 0;
+            }
+        }
+       
+        
+    }
+}
+footer{
+    width: 100%;
+    height: 50px;
+   background-image: url(./image/fon.jpg);
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    >p{
+       
+        color:black;
+        >a{
+            text-decoration: none;
+            color: black;
+
+        }
+    }
+    >p::first-letter{
+        color: black;
+    }
+}
